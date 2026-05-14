@@ -1,0 +1,191 @@
+export default function Portfolio() { return ( <div className="min-h-screen bg-black text-white overflow-hidden relative"> {/* Background Glow */} <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/20 blur-3xl rounded-full"></div> <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 blur-3xl rounded-full"></div>
+
+{/* Navbar */}
+  <nav className="sticky top-0 z-50 backdrop-blur-xl bg-white/5 border-b border-cyan-500/20">
+    <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 className="text-2xl font-bold tracking-wide text-cyan-400">
+        SEVANTHI
+      </h1>
+
+      <div className="hidden md:flex gap-8 text-sm">
+        <a href="#about" className="hover:text-cyan-400 transition">About</a>
+        <a href="#skills" className="hover:text-cyan-400 transition">Skills</a>
+        <a href="#education" className="hover:text-cyan-400 transition">Education</a>
+        <a href="#activities" className="hover:text-cyan-400 transition">Activities</a>
+        <a href="#contact" className="hover:text-cyan-400 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  {/* Hero Section */}
+  <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <p className="text-cyan-400 uppercase tracking-[6px] text-sm mb-4">
+        BCA Student
+      </p>
+
+      <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+        Sevanthi <span className="text-cyan-400">S</span>
+      </h1>
+
+      <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-xl">
+        Passionate BCA student with a strong foundation in programming,
+        problem-solving, and modern technologies. Skilled in C programming
+        with basic knowledge of SQL and HTML.
+      </p>
+
+      <div className="flex gap-4 flex-wrap">
+        <a
+          href="#contact"
+          className="px-6 py-3 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition text-black font-semibold shadow-lg shadow-cyan-500/40"
+        >
+          Contact Me
+        </a>
+
+        <a
+          href="/resume.pdf"
+          className="px-6 py-3 rounded-2xl border border-cyan-400 hover:bg-cyan-500/10 transition"
+        >
+          Download Resume
+        </a>
+      </div>
+    </div>
+
+    <div className="flex justify-center">
+      <div className="relative group">
+        <div className="absolute inset-0 bg-cyan-500 blur-3xl opacity-30 rounded-full"></div>
+
+        <img
+          src="/profile.jpg"
+          alt="Sevanthi"
+          className="relative w-80 h-80 object-cover rounded-full border-4 border-cyan-400 shadow-2xl shadow-cyan-500/40 group-hover:scale-105 transition duration-500"
+        />
+      </div>
+    </div>
+  </section>
+
+  {/* About */}
+  <section id="about" className="max-w-6xl mx-auto px-6 py-16">
+    <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8 shadow-xl">
+      <h2 className="text-4xl font-bold mb-6 text-cyan-400">About Me</h2>
+
+      <p className="text-gray-300 leading-relaxed text-lg">
+        I am a quick learner who enjoys exploring new technologies and
+        solving challenging problems. I am passionate about software
+        development and continuously improving my technical and creative
+        skills. My goal is to contribute to innovative projects while
+        growing in a collaborative and agile environment.
+      </p>
+    </div>
+  </section>
+
+  {/* Skills */}
+  <section id="skills" className="max-w-6xl mx-auto px-6 py-16">
+    <h2 className="text-4xl font-bold mb-10 text-cyan-400">Skills</h2>
+
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      {[
+        "C Programming",
+        "SQL",
+        "HTML",
+        "Problem Solving",
+        "Communication",
+        "Teamwork",
+        "Quick Learning",
+        "Cyber Awareness",
+      ].map((skill) => (
+        <div
+          key={skill}
+          className="backdrop-blur-xl bg-white/5 border border-cyan-500/20 rounded-2xl p-6 hover:scale-105 hover:border-cyan-400 transition duration-300"
+        >
+          <p className="font-semibold text-center">{skill}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* Education */}
+  <section id="education" className="max-w-6xl mx-auto px-6 py-16">
+    <h2 className="text-4xl font-bold mb-10 text-cyan-400">Education</h2>
+
+    <div className="space-y-6">
+      <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6">
+        <h3 className="text-2xl font-semibold mb-2">
+          Bachelor of Computer Applications
+        </h3>
+        <p className="text-cyan-300">Lowry Adventist College</p>
+        <p className="text-gray-400">Currently Pursuing</p>
+      </div>
+
+      <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6">
+        <h3 className="text-2xl font-semibold mb-2">
+          Pre-University Education
+        </h3>
+        <p className="text-cyan-300">Pragathi PU College</p>
+        <p className="text-gray-400">81%</p>
+      </div>
+
+      <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6">
+        <h3 className="text-2xl font-semibold mb-2">SSLC</h3>
+        <p className="text-cyan-300">Anjana Vidya Kendra</p>
+        <p className="text-gray-400">87%</p>
+      </div>
+    </div>
+  </section>
+
+  {/* Activities */}
+  <section id="activities" className="max-w-6xl mx-auto px-6 py-16">
+    <h2 className="text-4xl font-bold mb-10 text-cyan-400">
+      Activities & Achievements
+    </h2>
+
+    <div className="grid md:grid-cols-2 gap-6">
+      {[
+        "Participated in science experiments",
+        "Secured 1st position in Relay and Kho-Kho",
+        "Participated in college cultural activities",
+        "Part of cyber security awareness rally",
+        "Member of young innovative challengers club",
+        "Interested in chess, badminton and carrom",
+      ].map((item) => (
+        <div
+          key={item}
+          className="backdrop-blur-xl bg-white/5 border border-cyan-500/20 rounded-2xl p-5"
+        >
+          <p>{item}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* Contact */}
+  <section id="contact" className="max-w-6xl mx-auto px-6 py-20">
+    <div className="backdrop-blur-xl bg-white/5 border border-cyan-500/20 rounded-3xl p-10 text-center">
+      <h2 className="text-4xl font-bold text-cyan-400 mb-6">
+        Contact Me
+      </h2>
+
+      <div className="space-y-4 text-lg text-gray-300">
+        <p>Email: sevanthisrinivas29@gmail.com</p>
+        <p>Phone: +91 8073921158</p>
+        <p>Bengaluru, Karnataka</p>
+      </div>
+
+      <div className="mt-8">
+        <a
+          href="mailto:sevanthisrinivas29@gmail.com"
+          className="px-8 py-4 rounded-2xl bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/40"
+        >
+          Send Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Footer */}
+  <footer className="border-t border-white/10 py-8 text-center text-gray-500 text-sm">
+    © 2026 Sevanthi S • Cyber Glassmorphism Portfolio
+  </footer>
+</div>
+
+); }
